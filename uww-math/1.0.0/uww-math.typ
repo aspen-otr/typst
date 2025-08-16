@@ -31,7 +31,7 @@
   set page(
     paper: "a4",
     header: [
-      #class_code: #class_name
+      #smallcaps([#class_code: #class_name])
       #h(1fr)
       #due
       #h(1fr)
