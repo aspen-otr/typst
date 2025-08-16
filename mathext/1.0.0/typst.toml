@@ -1,0 +1,7 @@
+[package]
+name = "mathext"
+version = "1.0.0"
+entrypoint = "mathext.typ"
+authors = ["Aspen Price <aspen@aspen-otr.com>"]
+license = "Unlicense"
+description = "Extensions to normal math environments, carried over from LaTeX"
