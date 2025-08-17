@@ -22,10 +22,10 @@
 
 // Use: `#show: pset.with(...)` using the named arguments (all but `doc`)
 #let pset(
-  class_code: none,
-  class_name: none,
-  your_name: none,
-  due: none,
+  class_code: strong[_No Class Code_],
+  class_name: strong[_No Class Name_],
+  your_name: strong[_No Name_],
+  due: strong[_No Due Date_],
   rest,
 ) = {
   set page(
@@ -40,6 +40,44 @@
   )
   set text(size: 12pt)
   set enum(numbering: "1.a.i)", full: true)
+  set math.equation(numbering: "(1)", supplement: [Eq.])
+
+  set align(left)
+
+  rest
+}
+
+#let notes(
+  class_code: strong[_No Class Code_],
+  class_name: strong[_No Class Name_],
+  your_name: strong[_No Name_],
+  semester: strong[_No Semester Marking_],
+  rest,
+) = {
+
+  set align(center)
+
+  [
+    #set text(20pt)
+    #class_name \
+    #set text(15pt)
+    Notes for #semester \
+    #set text(12pt)
+    #your_name
+  ]
+
+  set page(
+    paper: "a4",
+    header: [
+      #smallcaps([#class_code: #semester])
+      #h(1fr)
+      #your_name
+    ]
+  )
+
+
+  set text(size: 12pt)
+  set enum(numbering: "1.a.i")
   set math.equation(numbering: "(1)", supplement: [Eq.])
 
   set align(left)
