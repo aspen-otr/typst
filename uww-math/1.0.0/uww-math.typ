@@ -5,6 +5,16 @@
   fill: rgb("#dfbfff"),
   supplement: [Thm.]
 )
+#let lemma = thmbox(
+  "lemma", "Lemma",
+  fill: rgb("#dfbfff"),
+  supplement: [Lem.]
+)
+#let prop = thmbox(
+  "proposition", "Proposition",
+  fill: rgb("#88cfd0"),
+  supplement: [Prop.]
+)
 #let cor = thmplain(
   "corollary", "Corollary",
   base: "theorem",
@@ -19,8 +29,7 @@
 #let example = thmplain("example", "Example").with(numbering: none)
 #let proof = thmproof("proof", "Proof")
 
-
-// Use: `#show: pset.with(...)` using the named arguments (all but `doc`)
+// Use: `#show: pset.with(...)` using the named arguments
 #let pset(
   class_code: strong[_No Class Code_],
   class_name: strong[_No Class Name_],
@@ -40,7 +49,9 @@
   )
   set text(size: 12pt)
   set enum(numbering: "1.a.i)", full: true)
+  set heading(numbering: "1.1.a")
   set math.equation(numbering: "(1)", supplement: [Eq.])
+  show sym.colon: $class("fence", colon)$ // Fixes colon spacing for $f: X -> Y$ and the like but preserves binop with $x : y$.
 
   set align(left)
 
@@ -66,6 +77,7 @@
     #your_name
   ]
 
+  set heading(numbering: "1.1)", supplement: [Sec.])
   set page(
     paper: "a4",
     header: [
@@ -75,10 +87,10 @@
     ]
   )
 
-
   set text(size: 12pt)
-  set enum(numbering: "1.a.i")
+  set enum(numbering: "1.a.i.")
   set math.equation(numbering: "(1)", supplement: [Eq.])
+  show sym.colon: $class("fence", colon)$ // Fixes colon spacing for $f: X -> Y$ and the like but preserves binop with $x : y$.
 
   set align(left)
 
