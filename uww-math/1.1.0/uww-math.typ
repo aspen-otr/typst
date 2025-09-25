@@ -44,7 +44,7 @@
 
     set enum(numbering: "1.a.i)", full: true)
     set heading(numbering: "1.1.a.")
-    set math.equation(numbering: "1", supplement: [Eq.])
+    set math.equation(numbering: "(1)", supplement: [Eq.])
 
     rest
 }
