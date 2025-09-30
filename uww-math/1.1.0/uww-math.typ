@@ -61,7 +61,6 @@
     show: spacing-fixes
     show: pretty-frac
 
-    set page(paper: "a4", numbering: "(1)")
 
     set align(center)
     set text(20pt)
@@ -76,6 +75,8 @@
 
     set align(left)
     set text(12pt)
+
+    set page(paper: "a4", numbering: "1", number-align: right)
 
     set enum(numbering: "1.a.i)", full: true)
     set heading(numbering: "1.1.a.")
