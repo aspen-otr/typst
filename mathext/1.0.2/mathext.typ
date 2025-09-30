@@ -25,6 +25,9 @@
 #let Bd = math.op("Bd")
 
 #let cl = math.overline
+#let iso = math.tilde.equiv
+#let sim = math.tilde.eq
+#let cong = math.eq.triple
 
 #let Sum = math.limits(math.sum)
 #let prod = math.product
